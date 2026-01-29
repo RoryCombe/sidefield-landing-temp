@@ -85,6 +85,36 @@
         .pricing-gradient {
             background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
         }
+        /* Carousel styles */
+        .hero-carousel {
+            position: relative;
+        }
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            pointer-events: none;
+        }
+        .carousel-slide.active {
+            position: relative;
+            opacity: 1;
+            transform: translateX(0);
+            pointer-events: auto;
+        }
+        .carousel-dot {
+            cursor: pointer;
+        }
+        .carousel-dot.active {
+            background-color: #22c55e;
+            width: 1.5rem;
+        }
+        .carousel-dot:hover:not(.active) {
+            background-color: #71717a;
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100 font-sans antialiased">
@@ -144,37 +174,111 @@
                     </a>
                 </div>
 
-                <!-- Hero Visual - Generic Community Dashboard -->
+                <!-- Hero Visual - Community Carousel -->
                 <div class="relative animate-float">
                     <div class="absolute inset-0 bg-gradient-to-r from-field-500/20 via-atproto-500/20 to-purple-500/20 blur-3xl rounded-full"></div>
-                    <div class="relative bg-zinc-900/90 backdrop-blur rounded-2xl border border-zinc-800 p-6 sm:p-8 shadow-2xl">
-                        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-zinc-800">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-sm">📚</div>
-                            <div class="text-left">
-                                <div class="font-semibold">Downtown Book Club</div>
-                                <div class="text-sm text-zinc-500">18 members · Next meetup in 3 days</div>
+                    
+                    <!-- Carousel Container -->
+                    <div class="hero-carousel relative">
+                        <!-- Slide 1: Book Club -->
+                        <div class="carousel-slide active relative bg-zinc-900/90 backdrop-blur rounded-2xl border border-zinc-800 p-6 sm:p-8 shadow-2xl">
+                            <div class="flex items-center gap-3 mb-4 pb-4 border-b border-zinc-800">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-sm">📚</div>
+                                <div class="text-left">
+                                    <div class="font-semibold">Downtown Book Club</div>
+                                    <div class="text-sm text-zinc-500">18 members · Next meetup in 3 days</div>
+                                </div>
+                                <div class="ml-auto">
+                                    <span class="px-2 py-1 rounded-full bg-field-600/20 text-field-400 text-xs font-medium">Active</span>
+                                </div>
                             </div>
-                            <div class="ml-auto">
-                                <span class="px-2 py-1 rounded-full bg-field-600/20 text-field-400 text-xs font-medium">Active</span>
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div class="p-4 rounded-xl bg-zinc-800/50">
+                                    <div class="text-2xl font-bold text-field-400">12</div>
+                                    <div class="text-xs text-zinc-500">Attending</div>
+                                </div>
+                                <div class="p-4 rounded-xl bg-zinc-800/50">
+                                    <div class="text-2xl font-bold text-amber-400">4</div>
+                                    <div class="text-xs text-zinc-500">Maybe</div>
+                                </div>
+                                <div class="p-4 rounded-xl bg-zinc-800/50">
+                                    <div class="text-2xl font-bold text-zinc-500">2</div>
+                                    <div class="text-xs text-zinc-500">Pending</div>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 rounded-lg bg-purple-600/10 border border-purple-600/30 text-sm text-purple-300">
+                                📖 Next: "The Midnight Library" — Thursday 7pm @ Maria's place
                             </div>
                         </div>
-                        <div class="grid grid-cols-3 gap-4 text-center">
-                            <div class="p-4 rounded-xl bg-zinc-800/50">
-                                <div class="text-2xl font-bold text-field-400">12</div>
-                                <div class="text-xs text-zinc-500">Attending</div>
+
+                        <!-- Slide 2: Running Crew -->
+                        <div class="carousel-slide relative bg-zinc-900/90 backdrop-blur rounded-2xl border border-zinc-800 p-6 sm:p-8 shadow-2xl">
+                            <div class="flex items-center gap-3 mb-4 pb-4 border-b border-zinc-800">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center text-white font-bold text-sm">🏃</div>
+                                <div class="text-left">
+                                    <div class="font-semibold">Portland Running Crew</div>
+                                    <div class="text-sm text-zinc-500">42 members · 3 runs this week</div>
+                                </div>
+                                <div class="ml-auto">
+                                    <span class="px-2 py-1 rounded-full bg-field-600/20 text-field-400 text-xs font-medium">Active</span>
+                                </div>
                             </div>
-                            <div class="p-4 rounded-xl bg-zinc-800/50">
-                                <div class="text-2xl font-bold text-amber-400">4</div>
-                                <div class="text-xs text-zinc-500">Maybe</div>
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div class="p-4 rounded-xl bg-zinc-800/50">
+                                    <div class="text-2xl font-bold text-field-400">24</div>
+                                    <div class="text-xs text-zinc-500">Running</div>
+                                </div>
+                                <div class="p-4 rounded-xl bg-zinc-800/50">
+                                    <div class="text-2xl font-bold text-amber-400">8</div>
+                                    <div class="text-xs text-zinc-500">Maybe</div>
+                                </div>
+                                <div class="p-4 rounded-xl bg-zinc-800/50">
+                                    <div class="text-2xl font-bold text-zinc-500">10</div>
+                                    <div class="text-xs text-zinc-500">Resting</div>
+                                </div>
                             </div>
-                            <div class="p-4 rounded-xl bg-zinc-800/50">
-                                <div class="text-2xl font-bold text-zinc-500">2</div>
-                                <div class="text-xs text-zinc-500">Pending</div>
+                            <div class="mt-4 p-3 rounded-lg bg-orange-600/10 border border-orange-600/30 text-sm text-orange-300">
+                                🏃 Next: 5K Morning Run — Saturday 7am @ Waterfront Park
                             </div>
                         </div>
-                        <div class="mt-4 p-3 rounded-lg bg-purple-600/10 border border-purple-600/30 text-sm text-purple-300">
-                            📖 Next: "The Midnight Library" — Thursday 7pm @ Maria's place
+
+                        <!-- Slide 3: Gaming Guild -->
+                        <div class="carousel-slide relative bg-zinc-900/90 backdrop-blur rounded-2xl border border-zinc-800 p-6 sm:p-8 shadow-2xl">
+                            <div class="flex items-center gap-3 mb-4 pb-4 border-b border-zinc-800">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">🎮</div>
+                                <div class="text-left">
+                                    <div class="font-semibold">Riverside Gaming Guild</div>
+                                    <div class="text-sm text-zinc-500">67 members · Raid tonight</div>
+                                </div>
+                                <div class="ml-auto">
+                                    <span class="px-2 py-1 rounded-full bg-cyan-600/20 text-cyan-400 text-xs font-medium">Live</span>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div class="p-4 rounded-xl bg-zinc-800/50">
+                                    <div class="text-2xl font-bold text-field-400">18</div>
+                                    <div class="text-xs text-zinc-500">Confirmed</div>
+                                </div>
+                                <div class="p-4 rounded-xl bg-zinc-800/50">
+                                    <div class="text-2xl font-bold text-amber-400">6</div>
+                                    <div class="text-xs text-zinc-500">Standby</div>
+                                </div>
+                                <div class="p-4 rounded-xl bg-zinc-800/50">
+                                    <div class="text-2xl font-bold text-zinc-500">4</div>
+                                    <div class="text-xs text-zinc-500">Needed</div>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-3 rounded-lg bg-cyan-600/10 border border-cyan-600/30 text-sm text-cyan-300">
+                                🎮 Next: Mythic Raid Night — Tonight 9pm EST · Voice required
+                            </div>
                         </div>
+                    </div>
+
+                    <!-- Carousel Dots -->
+                    <div class="flex justify-center gap-2 mt-6">
+                        <button class="carousel-dot active w-2 h-2 rounded-full bg-zinc-600 transition-all duration-300" data-slide="0"></button>
+                        <button class="carousel-dot w-2 h-2 rounded-full bg-zinc-600 transition-all duration-300" data-slide="1"></button>
+                        <button class="carousel-dot w-2 h-2 rounded-full bg-zinc-600 transition-all duration-300" data-slide="2"></button>
                     </div>
                 </div>
             </div>
@@ -692,6 +796,47 @@
                 }
             });
         });
+
+        // Hero Carousel
+        (function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            let currentSlide = 0;
+            let autoplayInterval;
+
+            function goToSlide(index) {
+                slides[currentSlide].classList.remove('active');
+                dots[currentSlide].classList.remove('active');
+                currentSlide = index;
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() {
+                const next = (currentSlide + 1) % slides.length;
+                goToSlide(next);
+            }
+
+            function startAutoplay() {
+                autoplayInterval = setInterval(nextSlide, 4500);
+            }
+
+            function resetAutoplay() {
+                clearInterval(autoplayInterval);
+                startAutoplay();
+            }
+
+            // Dot click handlers
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                    resetAutoplay();
+                });
+            });
+
+            // Start autoplay
+            startAutoplay();
+        })();
     </script>
 </body>
 </html>
