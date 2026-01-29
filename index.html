@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidefield — Decentralized Community Coordination</title>
-    <meta name="description" content="Your community, your data. Coordinate teams and groups on the decentralized web with AT Protocol.">
+    <title>Sidefield — Build any community, own your data</title>
+    <meta name="description" content="The decentralized alternative to Meetup. Coordinate any community — book clubs, running groups, gaming guilds, sports teams — while owning your data. Open source, self-hostable, or use Sidefield Cloud.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,8 +82,8 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
-        .animate-pulse-slow {
-            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        .pricing-gradient {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
         }
     </style>
 </head>
@@ -101,12 +101,18 @@
                     <span class="font-bold text-lg">Sidefield</span>
                 </div>
                 <div class="hidden md:flex items-center gap-8 text-sm text-zinc-400">
-                    <a href="#features" class="hover:text-white transition">Features</a>
-                    <a href="#how-it-works" class="hover:text-white transition">How it Works</a>
                     <a href="#use-cases" class="hover:text-white transition">Use Cases</a>
+                    <a href="#features" class="hover:text-white transition">Features</a>
+                    <a href="#pricing" class="hover:text-white transition">Pricing</a>
+                    <a href="https://github.com/sidefieldapp" target="_blank" class="hover:text-white transition flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
                 </div>
                 <a href="#waitlist" class="px-4 py-2 bg-field-600 hover:bg-field-500 rounded-lg text-sm font-medium transition">
-                    Join Waitlist
+                    Get Started
                 </a>
             </div>
         </div>
@@ -116,52 +122,58 @@
     <section class="hero-gradient field-pattern min-h-screen flex items-center pt-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
             <div class="text-center max-w-4xl mx-auto">
-                <!-- AT Protocol Badge -->
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full atproto-badge text-white text-xs font-medium mb-8">
-                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                <!-- Open Source Badge -->
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-800/80 border border-zinc-700 text-zinc-300 text-xs font-medium mb-8">
+                    <svg class="w-4 h-4 text-field-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
-                    Built on AT Protocol
+                    Open Source · Self-Hostable
                 </div>
                 
                 <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
-                    <span class="gradient-text">Your community.</span><br>
-                    <span class="text-white">Your data.</span>
+                    <span class="gradient-text">Build any community.</span><br>
+                    <span class="text-white">Own your data.</span>
                 </h1>
                 
                 <p class="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                    Sidefield is decentralized coordination for teams and communities. 
-                    No platform lock-in. No data silos. Just your group, working together 
-                    on the open web.
+                    The decentralized alternative to Meetup, Discord, and Slack for community coordination. 
+                    Book clubs, running groups, gaming guilds, neighborhood watch, sports teams — 
+                    finally, a home that's truly yours.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                     <a href="#waitlist" class="px-8 py-4 bg-field-600 hover:bg-field-500 rounded-xl text-lg font-semibold transition shadow-lg shadow-field-600/20 hover:shadow-field-500/30">
-                        Get Early Access
+                        Join Sidefield Cloud Waitlist
                     </a>
-                    <a href="#how-it-works" class="px-8 py-4 bg-zinc-800 hover:bg-zinc-700 rounded-xl text-lg font-semibold transition border border-zinc-700">
-                        See How It Works
+                    <a href="https://github.com/sidefieldapp" target="_blank" class="px-8 py-4 bg-zinc-800 hover:bg-zinc-700 rounded-xl text-lg font-semibold transition border border-zinc-700 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        Self-Host (Free)
                     </a>
                 </div>
 
-                <!-- Hero Visual -->
+                <!-- Hero Visual - Generic Community Dashboard -->
                 <div class="relative animate-float">
                     <div class="absolute inset-0 bg-gradient-to-r from-field-500/20 via-atproto-500/20 to-purple-500/20 blur-3xl rounded-full"></div>
                     <div class="relative bg-zinc-900/90 backdrop-blur rounded-2xl border border-zinc-800 p-6 sm:p-8 shadow-2xl">
                         <div class="flex items-center gap-3 mb-4 pb-4 border-b border-zinc-800">
-                            <div class="w-10 h-10 rounded-full bg-field-600 flex items-center justify-center text-white font-bold">FC</div>
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-sm">📚</div>
                             <div class="text-left">
-                                <div class="font-semibold">Sunday Football Club</div>
-                                <div class="text-sm text-zinc-500 font-mono">@sunday-fc.bsky.social</div>
+                                <div class="font-semibold">Downtown Book Club</div>
+                                <div class="text-sm text-zinc-500">18 members · Next meetup in 3 days</div>
+                            </div>
+                            <div class="ml-auto">
+                                <span class="px-2 py-1 rounded-full bg-field-600/20 text-field-400 text-xs font-medium">Active</span>
                             </div>
                         </div>
                         <div class="grid grid-cols-3 gap-4 text-center">
                             <div class="p-4 rounded-xl bg-zinc-800/50">
                                 <div class="text-2xl font-bold text-field-400">12</div>
-                                <div class="text-xs text-zinc-500">Available</div>
+                                <div class="text-xs text-zinc-500">Attending</div>
                             </div>
                             <div class="p-4 rounded-xl bg-zinc-800/50">
-                                <div class="text-2xl font-bold text-amber-400">3</div>
+                                <div class="text-2xl font-bold text-amber-400">4</div>
                                 <div class="text-xs text-zinc-500">Maybe</div>
                             </div>
                             <div class="p-4 rounded-xl bg-zinc-800/50">
@@ -169,8 +181,8 @@
                                 <div class="text-xs text-zinc-500">Pending</div>
                             </div>
                         </div>
-                        <div class="mt-4 p-3 rounded-lg bg-field-600/10 border border-field-600/30 text-sm text-field-300">
-                            ⚽ Next match: Saturday 3pm vs. Riverside FC
+                        <div class="mt-4 p-3 rounded-lg bg-purple-600/10 border border-purple-600/30 text-sm text-purple-300">
+                            📖 Next: "The Midnight Library" — Thursday 7pm @ Maria's place
                         </div>
                     </div>
                 </div>
@@ -183,23 +195,131 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="max-w-3xl mx-auto text-center mb-16">
                 <h2 class="text-3xl sm:text-4xl font-bold mb-6">
-                    Tired of this?
+                    Sound familiar?
                 </h2>
                 <div class="grid sm:grid-cols-3 gap-4 text-left">
                     <div class="p-4 rounded-xl bg-red-950/30 border border-red-900/30">
                         <div class="text-red-400 mb-2">💬</div>
                         <div class="font-medium text-red-200">WhatsApp chaos</div>
-                        <div class="text-sm text-zinc-500">50 messages to find who's coming</div>
+                        <div class="text-sm text-zinc-500">50 messages to find who's coming to book club</div>
                     </div>
                     <div class="p-4 rounded-xl bg-red-950/30 border border-red-900/30">
                         <div class="text-red-400 mb-2">🔒</div>
                         <div class="font-medium text-red-200">Platform lock-in</div>
-                        <div class="text-sm text-zinc-500">Your team data trapped in Discord</div>
+                        <div class="text-sm text-zinc-500">Your community trapped in Meetup/Discord</div>
                     </div>
                     <div class="p-4 rounded-xl bg-red-950/30 border border-red-900/30">
-                        <div class="text-red-400 mb-2">🗄️</div>
-                        <div class="font-medium text-red-200">No history</div>
-                        <div class="text-sm text-zinc-500">Who played last season? 🤷</div>
+                        <div class="text-red-400 mb-2">💸</div>
+                        <div class="font-medium text-red-200">You're the product</div>
+                        <div class="text-sm text-zinc-500">Ads, premium paywalls, algorithm games</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section id="use-cases" class="py-20 border-t border-zinc-800/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">One platform, every community</h2>
+                <p class="text-zinc-400 max-w-2xl mx-auto">Whether you're coordinating game nights or marathon training — if people need to gather, Sidefield helps.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Book Clubs -->
+                <div class="group p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-purple-600/50 transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">📚</div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2 text-purple-300">Book Clubs</h3>
+                            <p class="text-zinc-400 text-sm mb-3">Reading schedules, discussion threads, and book voting done right.</p>
+                            <ul class="text-sm text-zinc-500 space-y-1">
+                                <li>✓ Reading progress tracking</li>
+                                <li>✓ Spoiler-free discussions</li>
+                                <li>✓ Next book nominations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Running Groups -->
+                <div class="group p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-orange-600/50 transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">🏃</div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2 text-orange-300">Running Groups</h3>
+                            <p class="text-zinc-400 text-sm mb-3">Coordinate group runs, track pace groups, share routes.</p>
+                            <ul class="text-sm text-zinc-500 space-y-1">
+                                <li>✓ Run scheduling & RSVP</li>
+                                <li>✓ Route sharing</li>
+                                <li>✓ Pace group matching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaming Guilds -->
+                <div class="group p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-cyan-600/50 transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">🎮</div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2 text-cyan-300">Gaming Guilds</h3>
+                            <p class="text-zinc-400 text-sm mb-3">Raid schedules, team comp, and strategy without Discord lock-in.</p>
+                            <ul class="text-sm text-zinc-500 space-y-1">
+                                <li>✓ Event scheduling</li>
+                                <li>✓ Role sign-ups</li>
+                                <li>✓ Strategy discussions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neighborhood Groups -->
+                <div class="group p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-amber-600/50 transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">🏘️</div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2 text-amber-300">Neighborhood Groups</h3>
+                            <p class="text-zinc-400 text-sm mb-3">Local events, safety alerts, and community coordination.</p>
+                            <ul class="text-sm text-zinc-500 space-y-1">
+                                <li>✓ Local event planning</li>
+                                <li>✓ Community announcements</li>
+                                <li>✓ Neighbor connections</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Networks -->
+                <div class="group p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-blue-600/50 transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">💼</div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2 text-blue-300">Professional Networks</h3>
+                            <p class="text-zinc-400 text-sm mb-3">Meetups, skill shares, and industry gatherings.</p>
+                            <ul class="text-sm text-zinc-500 space-y-1">
+                                <li>✓ Event coordination</li>
+                                <li>✓ Topic discussions</li>
+                                <li>✓ Member directory</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sports Teams -->
+                <div class="group p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-field-600/50 transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">⚽</div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2 text-field-300">Sports Teams</h3>
+                            <p class="text-zinc-400 text-sm mb-3">Fixtures, availability, squad selection — all in one place.</p>
+                            <ul class="text-sm text-zinc-500 space-y-1">
+                                <li>✓ Match scheduling & RSVP</li>
+                                <li>✓ Position preferences</li>
+                                <li>✓ Season stats tracking</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -207,14 +327,14 @@
     </section>
 
     <!-- Features -->
-    <section id="features" class="py-20 border-t border-zinc-800/50">
+    <section id="features" class="py-20 border-t border-zinc-800/50 bg-zinc-900/30">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl sm:text-4xl font-bold mb-4">
-                    <span class="gradient-text">Coordination, decentralized</span>
+                    <span class="gradient-text">Everything you need to coordinate</span>
                 </h2>
                 <p class="text-zinc-400 max-w-2xl mx-auto">
-                    Everything you need to run your community, built on protocols that put you in control.
+                    Simple tools that work for any community, without the corporate baggage.
                 </p>
             </div>
             
@@ -227,7 +347,7 @@
                         </svg>
                     </div>
                     <h3 class="font-semibold text-lg mb-2">Smart Scheduling</h3>
-                    <p class="text-zinc-400 text-sm">Events, fixtures, and availability polling. See who's in at a glance.</p>
+                    <p class="text-zinc-400 text-sm">Events, recurring meetups, and availability polling. See who's in at a glance.</p>
                 </div>
 
                 <!-- Feature 2 -->
@@ -238,7 +358,7 @@
                         </svg>
                     </div>
                     <h3 class="font-semibold text-lg mb-2">You Own Your Data</h3>
-                    <p class="text-zinc-400 text-sm">Data lives in your Personal Data Server. Export, migrate, or self-host anytime.</p>
+                    <p class="text-zinc-400 text-sm">Export anytime. Self-host if you want. No lock-in, no hostage situations.</p>
                 </div>
 
                 <!-- Feature 3 -->
@@ -249,7 +369,7 @@
                         </svg>
                     </div>
                     <h3 class="font-semibold text-lg mb-2">Portable Identity</h3>
-                    <p class="text-zinc-400 text-sm">Use your Bluesky handle. One identity across the ATmosphere.</p>
+                    <p class="text-zinc-400 text-sm">Use your Bluesky handle or create one. One identity across communities.</p>
                 </div>
 
                 <!-- Feature 4 -->
@@ -259,8 +379,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                         </svg>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2">Squad Management</h3>
-                    <p class="text-zinc-400 text-sm">Roles, positions, and stats. Know your team inside out.</p>
+                    <h3 class="font-semibold text-lg mb-2">Member Management</h3>
+                    <p class="text-zinc-400 text-sm">Roles, permissions, and profiles. Know your community inside out.</p>
                 </div>
 
                 <!-- Feature 5 -->
@@ -271,206 +391,182 @@
                         </svg>
                     </div>
                     <h3 class="font-semibold text-lg mb-2">Threaded Discussions</h3>
-                    <p class="text-zinc-400 text-sm">Organized conversations. No more scrolling through noise.</p>
+                    <p class="text-zinc-400 text-sm">Organized conversations by topic. No more scrolling through noise.</p>
                 </div>
 
                 <!-- Feature 6 -->
                 <div class="card-glow rounded-2xl p-6 transition-all duration-300">
                     <div class="w-12 h-12 rounded-xl bg-rose-600/20 flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
                     </div>
-                    <h3 class="font-semibold text-lg mb-2">Zero Infrastructure</h3>
-                    <p class="text-zinc-400 text-sm">No servers to run. No databases to maintain. It just works.</p>
+                    <h3 class="font-semibold text-lg mb-2">Privacy-First</h3>
+                    <p class="text-zinc-400 text-sm">No ads. No tracking. No selling your data to the highest bidder.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How it Works -->
-    <section id="how-it-works" class="py-20 border-t border-zinc-800/50 bg-zinc-900/30">
+    <!-- Pricing -->
+    <section id="pricing" class="py-20 border-t border-zinc-800/50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4">How it works</h2>
-                <p class="text-zinc-400">Powered by the AT Protocol — the same tech behind Bluesky</p>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Simple, honest pricing</h2>
+                <p class="text-zinc-400 max-w-2xl mx-auto">Open source forever. Pay only if you want us to host it.</p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-field-600 to-field-700 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
-                    <h3 class="font-semibold text-lg mb-2">Sign in with Bluesky</h3>
-                    <p class="text-zinc-400 text-sm">Use your existing handle or create one. Your identity travels with you.</p>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Self-Hosted -->
+                <div class="p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-zinc-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">Self-Hosted</h3>
+                            <p class="text-zinc-500 text-sm">Run it yourself</p>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">Free</span>
+                        <span class="text-zinc-500 ml-1">forever</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-center gap-2 text-zinc-300">
+                            <svg class="w-5 h-5 text-field-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Full source code access
+                        </li>
+                        <li class="flex items-center gap-2 text-zinc-300">
+                            <svg class="w-5 h-5 text-field-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Unlimited communities
+                        </li>
+                        <li class="flex items-center gap-2 text-zinc-300">
+                            <svg class="w-5 h-5 text-field-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Unlimited members
+                        </li>
+                        <li class="flex items-center gap-2 text-zinc-300">
+                            <svg class="w-5 h-5 text-field-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            All core features
+                        </li>
+                        <li class="flex items-center gap-2 text-zinc-300">
+                            <svg class="w-5 h-5 text-field-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Community support
+                        </li>
+                    </ul>
+                    <a href="https://github.com/sidefieldapp" target="_blank" class="block w-full px-6 py-3 text-center rounded-xl border border-zinc-700 hover:border-zinc-600 hover:bg-zinc-800 transition font-medium">
+                        View on GitHub
+                    </a>
                 </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-atproto-600 to-atproto-700 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
-                    <h3 class="font-semibold text-lg mb-2">Create or join a group</h3>
-                    <p class="text-zinc-400 text-sm">Set up your team, club, or community in seconds. Invite with a link.</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
-                    <h3 class="font-semibold text-lg mb-2">Coordinate freely</h3>
-                    <p class="text-zinc-400 text-sm">Schedule, discuss, and organize. Your data stays in your PDS.</p>
+
+                <!-- Sidefield Cloud -->
+                <div class="p-8 rounded-2xl pricing-gradient border border-field-600/30 relative overflow-hidden">
+                    <div class="absolute top-4 right-4">
+                        <span class="px-3 py-1 rounded-full bg-field-600 text-white text-xs font-medium">Coming Soon</span>
+                    </div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-field-500 to-atproto-500 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">Sidefield Cloud</h3>
+                            <p class="text-zinc-500 text-sm">We host, you relax</p>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$9</span>
+                        <span class="text-zinc-500 ml-1">/month per community</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-center gap-2 text-zinc-300">
+                            <svg class="w-5 h-5 text-field-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Everything in self-hosted
+                        </li>
+                        <li class="flex items-center gap-2 text-zinc-300">
+                            <svg class="w-5 h-5 text-field-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Managed hosting & backups
+                        </li>
+                        <li class="flex items-center gap-2 text-zinc-300">
+                            <svg class="w-5 h-5 text-field-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Custom domain support
+                        </li>
+                        <li class="flex items-center gap-2 text-zinc-300">
+                            <svg class="w-5 h-5 text-field-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Priority email support
+                        </li>
+                        <li class="flex items-center gap-2 text-zinc-300">
+                            <svg class="w-5 h-5 text-field-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Zero maintenance hassle
+                        </li>
+                    </ul>
+                    <a href="#waitlist" class="block w-full px-6 py-3 text-center rounded-xl bg-field-600 hover:bg-field-500 transition font-medium shadow-lg shadow-field-600/20">
+                        Join Waitlist
+                    </a>
                 </div>
             </div>
 
-            <!-- Architecture diagram -->
-            <div class="mt-16 p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800">
-                <div class="text-center mb-6">
-                    <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Architecture</span>
-                </div>
-                <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-                    <div class="flex flex-col items-center p-4">
-                        <div class="w-12 h-12 rounded-lg bg-field-600/20 flex items-center justify-center mb-2">
-                            <span class="text-2xl">👤</span>
-                        </div>
-                        <span class="text-sm font-medium">You</span>
-                        <span class="text-xs text-zinc-500">@you.bsky.social</span>
-                    </div>
-                    <svg class="w-8 h-8 text-zinc-600 rotate-90 md:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                    <div class="flex flex-col items-center p-4 rounded-xl bg-atproto-600/10 border border-atproto-600/30">
-                        <div class="w-12 h-12 rounded-lg bg-atproto-600/20 flex items-center justify-center mb-2">
-                            <span class="text-2xl">🗄️</span>
-                        </div>
-                        <span class="text-sm font-medium">Your PDS</span>
-                        <span class="text-xs text-zinc-500">Personal Data Server</span>
-                    </div>
-                    <svg class="w-8 h-8 text-zinc-600 rotate-90 md:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                    <div class="flex flex-col items-center p-4 rounded-xl bg-field-600/10 border border-field-600/30">
-                        <div class="w-12 h-12 rounded-lg bg-field-600/20 flex items-center justify-center mb-2">
-                            <span class="text-2xl">⚽</span>
-                        </div>
-                        <span class="text-sm font-medium">Sidefield</span>
-                        <span class="text-xs text-zinc-500">AppView</span>
-                    </div>
-                    <svg class="w-8 h-8 text-zinc-600 rotate-90 md:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"/>
-                    </svg>
-                    <div class="flex flex-col items-center p-4">
-                        <div class="w-12 h-12 rounded-lg bg-purple-600/20 flex items-center justify-center mb-2">
-                            <span class="text-2xl">👥</span>
-                        </div>
-                        <span class="text-sm font-medium">Your Team</span>
-                        <span class="text-xs text-zinc-500">Decentralized</span>
-                    </div>
-                </div>
-                <p class="text-center text-xs text-zinc-500 mt-6">
-                    Sidefield reads from and writes to your PDS. Switch apps anytime — your data stays yours.
+            <!-- Open Core Philosophy -->
+            <div class="mt-16 p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 max-w-3xl mx-auto text-center">
+                <p class="text-zinc-400 text-sm">
+                    <span class="text-field-400 font-medium">Open core model:</span> Like Ghost, Plausible, and Cal.com — 
+                    the core is 100% open source. Cloud is for those who want convenience without ops burden. 
+                    Either way, your data is portable.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Use Cases -->
-    <section id="use-cases" class="py-20 border-t border-zinc-800/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Built for communities</h2>
-                <p class="text-zinc-400">From Sunday league to reading groups — if you coordinate, Sidefield fits.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Sports Teams -->
-                <div class="group p-6 rounded-2xl bg-gradient-to-br from-field-950 to-zinc-900 border border-field-800/30 hover:border-field-600/50 transition-all">
-                    <div class="flex items-start gap-4">
-                        <div class="text-4xl">⚽</div>
-                        <div>
-                            <h3 class="font-semibold text-lg mb-2 text-field-300">Sports Teams</h3>
-                            <p class="text-zinc-400 text-sm mb-4">Fixtures, availability, squad selection. Finally, a place for everything.</p>
-                            <ul class="text-sm text-zinc-500 space-y-1">
-                                <li>✓ Match scheduling & RSVP</li>
-                                <li>✓ Position preferences</li>
-                                <li>✓ Season stats tracking</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mt-4 pt-4 border-t border-field-900/50">
-                        <span class="inline-flex items-center gap-1 text-xs text-field-400 font-medium">
-                            <span class="w-2 h-2 rounded-full bg-field-400 animate-pulse"></span>
-                            Launching first
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Running Clubs -->
-                <div class="group p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all">
-                    <div class="flex items-start gap-4">
-                        <div class="text-4xl">🏃</div>
-                        <div>
-                            <h3 class="font-semibold text-lg mb-2">Running Clubs</h3>
-                            <p class="text-zinc-400 text-sm mb-4">Group runs, pace matching, route sharing. Build your running community.</p>
-                            <ul class="text-sm text-zinc-500 space-y-1">
-                                <li>✓ Run scheduling</li>
-                                <li>✓ Route sharing</li>
-                                <li>✓ Pace groups</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Book Clubs -->
-                <div class="group p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all">
-                    <div class="flex items-start gap-4">
-                        <div class="text-4xl">📚</div>
-                        <div>
-                            <h3 class="font-semibold text-lg mb-2">Book Clubs</h3>
-                            <p class="text-zinc-400 text-sm mb-4">Reading schedules, discussion threads, book voting. Literary coordination.</p>
-                            <ul class="text-sm text-zinc-500 space-y-1">
-                                <li>✓ Reading progress tracking</li>
-                                <li>✓ Discussion threads</li>
-                                <li>✓ Book nomination & voting</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gaming Guilds -->
-                <div class="group p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all">
-                    <div class="flex items-start gap-4">
-                        <div class="text-4xl">🎮</div>
-                        <div>
-                            <h3 class="font-semibold text-lg mb-2">Gaming Guilds</h3>
-                            <p class="text-zinc-400 text-sm mb-4">Raid schedules, team composition, strategy discussions. Level up together.</p>
-                            <ul class="text-sm text-zinc-500 space-y-1">
-                                <li>✓ Event scheduling</li>
-                                <li>✓ Role sign-ups</li>
-                                <li>✓ Strategy discussions</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Open Source / AT Protocol -->
-    <section class="py-20 border-t border-zinc-800/50 bg-gradient-to-b from-zinc-900/50 to-zinc-950">
+    <!-- AT Protocol Section (Secondary) -->
+    <section class="py-20 border-t border-zinc-800/50 bg-zinc-900/30">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-atproto-600/20 text-atproto-300 text-xs font-medium mb-4">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                         </svg>
-                        Open Source
+                        Powered by AT Protocol
                     </div>
                     <h2 class="text-3xl sm:text-4xl font-bold mb-4">
-                        Built in the open
+                        Decentralized by design
                     </h2>
                     <p class="text-zinc-400 mb-6">
-                        Sidefield is built on AT Protocol — the same decentralized foundation as Bluesky. 
-                        Your data is stored in your Personal Data Server (PDS), not our servers. 
-                        The code is open source. The protocol is open. Your community is yours.
+                        Built on AT Protocol — the same foundation as Bluesky. Your identity is portable, 
+                        your data lives in your Personal Data Server, and you can leave anytime without losing anything.
+                    </p>
+                    <p class="text-zinc-500 text-sm mb-6">
+                        This isn't just marketing speak. The protocol ensures no single company — not even us — 
+                        can lock you in or shut you out. True ownership.
                     </p>
                     <div class="flex flex-wrap gap-3">
                         <span class="px-3 py-1 rounded-lg bg-zinc-800 text-zinc-300 text-sm font-mono">AT Protocol</span>
-                        <span class="px-3 py-1 rounded-lg bg-zinc-800 text-zinc-300 text-sm font-mono">Lexicons</span>
                         <span class="px-3 py-1 rounded-lg bg-zinc-800 text-zinc-300 text-sm font-mono">DIDs</span>
                         <span class="px-3 py-1 rounded-lg bg-zinc-800 text-zinc-300 text-sm font-mono">PDS</span>
+                        <span class="px-3 py-1 rounded-lg bg-zinc-800 text-zinc-300 text-sm font-mono">Lexicons</span>
                     </div>
                 </div>
                 <div class="relative">
@@ -482,15 +578,16 @@
                             <div class="w-3 h-3 rounded-full bg-green-500"></div>
                             <span class="ml-2 text-zinc-500 text-xs">sidefield-lexicons</span>
                         </div>
-                        <pre class="text-xs sm:text-sm overflow-x-auto"><code class="text-zinc-300"><span class="text-purple-400">// Your data, your schema</span>
+                        <pre class="text-xs sm:text-sm overflow-x-auto"><code class="text-zinc-300"><span class="text-purple-400">// Your community, your schema</span>
 {
-  <span class="text-field-400">"$type"</span>: <span class="text-amber-300">"community.sidefield.team"</span>,
-  <span class="text-field-400">"name"</span>: <span class="text-amber-300">"Sunday FC"</span>,
-  <span class="text-field-400">"sport"</span>: <span class="text-amber-300">"football"</span>,
+  <span class="text-field-400">"$type"</span>: <span class="text-amber-300">"community.sidefield.group"</span>,
+  <span class="text-field-400">"name"</span>: <span class="text-amber-300">"Downtown Book Club"</span>,
+  <span class="text-field-400">"type"</span>: <span class="text-amber-300">"book-club"</span>,
   <span class="text-field-400">"members"</span>: [
     <span class="text-amber-300">"did:plc:abc..."</span>,
     <span class="text-amber-300">"did:plc:xyz..."</span>
-  ]
+  ],
+  <span class="text-field-400">"portable"</span>: <span class="text-cyan-400">true</span>
 }</code></pre>
                     </div>
                 </div>
@@ -506,11 +603,11 @@
                 <div class="absolute inset-0 field-pattern opacity-50"></div>
                 <div class="relative p-8 sm:p-12 md:p-16 text-center">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                        Ready to own your community?
+                        Ready to build your community?
                     </h2>
                     <p class="text-zinc-400 text-lg mb-8 max-w-2xl mx-auto">
-                        Join the waitlist for early access. We're starting with sports teams 
-                        and expanding from there.
+                        Join the Sidefield Cloud waitlist for a hassle-free hosted experience, 
+                        or dive into the code and self-host today.
                     </p>
                     
                     <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-3" onsubmit="handleSubmit(event)">
@@ -524,12 +621,12 @@
                             type="submit"
                             class="px-6 py-3 bg-field-600 hover:bg-field-500 rounded-xl font-semibold transition shadow-lg shadow-field-600/20 whitespace-nowrap"
                         >
-                            Join Waitlist
+                            Join Cloud Waitlist
                         </button>
                     </form>
                     
-                    <p class="mt-4 text-xs text-zinc-500">
-                        No spam, just updates. Unsubscribe anytime.
+                    <p class="mt-4 text-sm text-zinc-500">
+                        or <a href="https://github.com/sidefieldapp" target="_blank" class="text-field-400 hover:text-field-300 underline">self-host from GitHub</a> — it's free and open source
                     </p>
 
                     <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-zinc-500">
@@ -537,13 +634,13 @@
                             <svg class="w-5 h-5 text-field-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
-                            Free to use
+                            Open source
                         </div>
                         <div class="flex items-center gap-2">
                             <svg class="w-5 h-5 text-field-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
-                            Open source
+                            Self-hostable
                         </div>
                         <div class="flex items-center gap-2">
                             <svg class="w-5 h-5 text-field-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -577,7 +674,7 @@
                         </svg>
                         Bluesky
                     </a>
-                    <a href="https://github.com" target="_blank" class="hover:text-white transition flex items-center gap-1">
+                    <a href="https://github.com/sidefieldapp" target="_blank" class="hover:text-white transition flex items-center gap-1">
                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
@@ -586,7 +683,7 @@
                 </div>
                 
                 <p class="text-xs text-zinc-600">
-                    Built with ❤️ on the ATmosphere
+                    Open source · Built on AT Protocol
                 </p>
             </div>
         </div>
@@ -596,7 +693,7 @@
         function handleSubmit(e) {
             e.preventDefault();
             const email = e.target.querySelector('input[type="email"]').value;
-            alert(`Thanks! We'll be in touch at ${email}`);
+            alert(`Thanks! We'll notify you at ${email} when Sidefield Cloud launches.`);
             e.target.reset();
         }
 
