@@ -1171,11 +1171,60 @@
     </footer>
 
     <script>
-        function handleSubmit(e) {
+        // Convex HTTP endpoint - update this after running `npx convex dev`
+        const CONVEX_URL = 'https://doting-hedgehog-939.convex.site';
+        
+        async function handleSubmit(e) {
             e.preventDefault();
-            const email = e.target.querySelector('input[type="email"]').value;
-            alert(`Thanks! We'll notify you at ${email} when Sidefield Cloud launches.`);
-            e.target.reset();
+            const form = e.target;
+            const emailInput = form.querySelector('input[type="email"]');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const email = emailInput.value;
+            
+            // Update UI to loading state
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Joining...';
+            submitBtn.disabled = true;
+            
+            try {
+                const response = await fetch(`${CONVEX_URL}/waitlist`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, source: 'landing-page' })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Replace form with success message
+                    form.innerHTML = `
+                        <div class="flex flex-col items-center gap-4 py-4">
+                            <div class="w-16 h-16 rounded-full bg-field-600/20 flex items-center justify-center">
+                                <svg class="w-8 h-8 text-field-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <p class="text-field-400 text-lg">${data.alreadyExists ? "You're already on the list!" : "You're on the list!"}</p>
+                            <p class="text-zinc-400 text-sm">We'll notify you when we launch.</p>
+                        </div>
+                    `;
+                } else {
+                    throw new Error(data.error || 'Something went wrong');
+                }
+            } catch (error) {
+                console.error('Waitlist error:', error);
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                // Show error inline
+                let errorEl = form.querySelector('.error-message');
+                if (!errorEl) {
+                    errorEl = document.createElement('p');
+                    errorEl.className = 'error-message text-red-400 text-sm mt-2';
+                    form.appendChild(errorEl);
+                }
+                errorEl.textContent = 'Something went wrong. Please try again.';
+            }
         }
 
         // Smooth scroll for anchor links
